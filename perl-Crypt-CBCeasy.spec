@@ -5,7 +5,7 @@ Summary:	Crypt::CBCeasy Perl module - makes use of Crypt::CBC simpler
 Summary(pl):	Modu³ Perla Crypt::CBCeasy - upraszczaj±cy sposób u¿ycia Crypt::CBC
 Name:		perl-Crypt-CBCeasy
 Version:	0.24
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
