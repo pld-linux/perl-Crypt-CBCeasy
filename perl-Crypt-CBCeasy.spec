@@ -5,13 +5,13 @@ Summary:	Crypt::CBCeasy Perl module - makes use of Crypt::CBC simpler
 Summary(pl):	Modu³ Perla Crypt::CBCeasy - upraszczaj±cy sposób u¿ycia Crypt::CBC
 Name:		perl-Crypt-CBCeasy
 Version:	0.24
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Crypt-CBC >= 1.20
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl(Crypt::CBC) >= 1.20
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -28,7 +28,8 @@ prostych rzeczy w jednolinijkowcach.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -46,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/Crypt/CBCeasy.pm
+%{perl_vendorlib}/Crypt/CBCeasy.pm
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/CBCeasy_sock.pl
