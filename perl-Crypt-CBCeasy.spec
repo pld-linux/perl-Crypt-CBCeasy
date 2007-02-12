@@ -2,7 +2,7 @@
 %define		pdir	Crypt
 %define		pnam	CBCeasy
 Summary:	Crypt::CBCeasy Perl module - makes use of Crypt::CBC simpler
-Summary(pl):	Modu≥ Perla Crypt::CBCeasy - upraszczaj±cy sposÛb uøycia Crypt::CBC
+Summary(pl.UTF-8):   Modu≈Ç Perla Crypt::CBCeasy - upraszczajƒÖcy spos√≥b u≈ºycia Crypt::CBC
 Name:		perl-Crypt-CBCeasy
 Version:	0.24
 Release:	3
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module is a helper for Crypt::CBC to make simple and usual jobs
 just one-liners.
 
-%description -l pl
-Jest to modu≥ pomocniczy dla Crypt::CBC, aby upro∂ciÊ wykonywanie
+%description -l pl.UTF-8
+Jest to modu≈Ç pomocniczy dla Crypt::CBC, aby upro≈õciƒá wykonywanie
 prostych rzeczy w jednolinijkowcach.
 
 %prep
