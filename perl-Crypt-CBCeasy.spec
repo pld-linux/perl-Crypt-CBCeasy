@@ -1,6 +1,6 @@
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	CBCeasy
+%include	/usr/lib/rpm/macros.perl
 Summary:	Crypt::CBCeasy Perl module - makes use of Crypt::CBC simpler
 Summary(pl.UTF-8):	Moduł Perla Crypt::CBCeasy - upraszczający sposób użycia Crypt::CBC
 Name:		perl-Crypt-CBCeasy
@@ -11,8 +11,9 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	728fb6478c2ad7b13bfcb104ba073fca
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/Crypt-CBCeasy/
 BuildRequires:	perl-Crypt-CBC >= 1.20
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl(Crypt::CBC) >= 1.20
 BuildArch:	noarch
@@ -41,7 +42,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
