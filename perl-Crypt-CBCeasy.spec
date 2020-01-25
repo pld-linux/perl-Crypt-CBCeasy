@@ -1,6 +1,5 @@
 %define		pdir	Crypt
 %define		pnam	CBCeasy
-%include	/usr/lib/rpm/macros.perl
 Summary:	Crypt::CBCeasy Perl module - makes use of Crypt::CBC simpler
 Summary(pl.UTF-8):	Moduł Perla Crypt::CBCeasy - upraszczający sposób użycia Crypt::CBC
 Name:		perl-Crypt-CBCeasy
